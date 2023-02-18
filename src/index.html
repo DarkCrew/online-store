@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Online store</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="shortcut icon" href="./assets/images/icon.png" />
+    </head>
+    <body class="body-container">
+        <header class="header">
+            <div class="container header-container">
+                <a href="#" class="header-logo">
+                    <h1>Phone store</h1>
+                </a>
+                <div class="search-container">
+                    <input type="text" name="text" class="input-search" placeholder="Search phones here!" autocomplete="off">
+                    <button class="button-search">
+                        <img class="button-search-img" src="./assets/images/search.png" alt="search">
+                        <img class="button-search-reset-img unactive" src="./assets/images/cross-mark.png" alt="search-reset">
+                    </button>
+                </div>
+                <nav class="header-nav">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item">
+                            <p>Cart</p>
+                            <div class="cart-container">
+                                <img class="cart-icon" src="./assets/images/shopping-cart.png" alt="shopping-cart" />
+                                <span class="cart-circle">0</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="phone-background">
+                <div class="container phone-title-container">
+                    <h2 class="phone-title">Good phones</br> at good prices</br> only in our store</h2>
+                </div>
+                <img src="./assets/images/phone-background.jpg" />
+            </div>
+            <div class="container main-container">
+                <aside class="filter-container">
+                    <div class="filter-item-container-range">
+                        <div class="filter-item-quantity-input">
+                            <p class="filter-title">Quantity in stock</p>
+                            <div class="filter-item-quantity-slider">
+                                <div id="filter-quantity-progress" class="filter-item-quantity-slider-progress">
+                                </div>
+                            </div>
+                            <div class="quantity-range-input">
+                                <input type="range" id="quantity-range-min" class="quantity-range-input-min" min="0" max="100" value="0"> 
+                                <input type="range" id="quantity-range-max" class="quantity-range-input-max" min="0" max="100" value="100"> 
+                            </div>
+                        </div>
+                        <div class="filter-item-buttons">
+                            <input readonly class="filter-item-quantity-button" type="number" placeholder="from" value="0">
+                            <input readonly class="filter-item-quantity-button" type="number" placeholder="to" value="100">
+                        </div>
+                    </div>
+                    <div class="filter-item-container">
+                        <p class="filter-title">Producer</p>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-apple" type="checkbox" name="Apple">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="Apple">Apple</label>
+                        </div>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-xiaomi" type="checkbox" name="Xiaomi">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="Xiaomi">Xiaomi</label>
+                        </div>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-samsung" type="checkbox" name="Samsung">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="Samsung">Samsung</label>
+                        </div>
+                    </div>
+                    <div class="filter-item-container-range">
+                        <div class="filter-item-quantity-input">
+                            <p class="filter-title">Year</p>
+                            <div class="filter-item-quantity-slider">
+                                <div id="filter-year-progress" class="filter-item-quantity-slider-progress">
+                                </div>
+                            </div>
+                            <div class="year-range-input">
+                                <input type="range" id="year-range-min" class="quantity-range-input-min" min="2000" max="2023" value="2000"> 
+                                <input type="range" id="year-range-min" class="quantity-range-input-max" min="2000" max="2023" value="2023"> 
+                            </div>
+                        </div>
+                        <div class="filter-item-buttons">
+                            <input readonly class="filter-item-year-button" type="number" placeholder="from" value="2000">
+                            <input readonly class="filter-item-year-button" type="number" placeholder="to" value="2023">
+                        </div>
+                    </div>
+                    <div class="filter-item-container">
+                        <p class="filter-title">Color</p>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-black" type="checkbox" name="black">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="black">black</label>
+                        </div>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-white" type="checkbox" name="white">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="white">white</label>
+                        </div>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-red" type="checkbox" name="red">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="red">red</label>
+                        </div>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-pink" type="checkbox" name="pink">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="pink">pink</label>
+                        </div>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-blue" type="checkbox" name="blue">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="blue">blue</label>
+                        </div>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-green" type="checkbox" name="green">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="green">green</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-item-container">
+                        <p class="filter-title">Amount of memory</p>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-64" type="checkbox" name="64">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="64">64GB</label>
+                        </div>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-128" type="checkbox" name="128">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="128">128GB</label>
+                        </div>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-256" type="checkbox" name="256">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="256">256GB</label>
+                        </div>
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-512" type="checkbox" name="512">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="512">512GB</label>
+                        </div>
+                    </div>
+                    <div class="input-reset-buttons">
+                        <button id="reset-filters" class="input-reset-button">Reset filters</button>
+                        <button id="reset-settings" class="input-reset-button">Reset all settings</button>
+                    </div>
+                </aside>
+                <div class="items-container">
+                    <div class="items-filter">
+                        <div class="input-name-phone">
+                            <label>
+                                <input id="input-popular" type="checkbox" name="popular">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="popular">Only popular</label>
+                        </div>
+                        <select class="items-filter-options">
+                            <option>By name: from A to Z</option>
+                            <option>By name: from Z to A</option>
+                            <option>By year: ascending</option>
+                            <option>By year: descending</option>
+                        </select>
+                    </div>
+                    
+                    <div class="item-phones-container">
+                    </div>
+                </div>
+            </div>
+            <div class="preloader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-link-elements">
+                    <a href="https://github.com/DarkCrew" target="_blank">
+                        <img src="./assets/images/github.png" alt="github" class="footer-icon github-link"></img>
+                    </a>
+                    <p class="footer-info">Created in 2022</p>
+                    <a href="https://rs.school/js/" target="_blank">
+                        <img src="./assets/images/rs-school.png" alt="rss" class="footer-icon rss-link"></img>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <template id="item-phone-template">
+            <div class="item-phone">
+                <img class="item-phone-photo"  alt="phone">
+                <img class="item-phone-basket" src="./assets/images/shopping-cart.png" alt="phone-basket">
+                <div class="phone-desc-container">
+                    <p class="phone-desc-brand"></p>
+                    <di class="phone-desc-subcontainer">
+                        <p class="phone-desc-model"></p>
+                        <span>&nbsp;-&nbsp;</span>
+                        <p class="phone-desc-size"></p>
+                        <p class="phone-desc-size">GB</p>
+                    </di>
+                </div>
+                <div class="phone-characteristics">
+                    <div class="phone-characteristics-item">
+                        <p class="phone-char-title">Color:</p>
+                        <p class="phone-char-subtitle" id="phone-color"></p>
+                    </div>
+                    <div class="phone-characteristics-item">
+                        <p class="phone-char-title">Year:</p>
+                        <p class="phone-char-subtitle" id="phone-year"></p>
+                    </div>
+                    <div class="phone-characteristics-item">
+                        <p class="phone-char-title">Producer:</p>
+                        <p class="phone-char-subtitle" id="phone-producer"></p>
+                    </div>
+                </div>
+                <div class="phone-existence-container">
+                    <div class="phone-stock-container">
+                        <p class="phone-stock-title">In stock: </p>
+                        <div class="phone-stock-subtitle-container">
+                            <p class="phone-stock-subtitle" id="phone-stock"></p>
+                            <span>&nbsp;</span>
+                            <p class="phone-stock-subtitle">pieces</p>
+                        </div>
+                    </div>
+                    <div class="phone-price-container">
+                        <p class="phone-price-subtitle" id="phone-price"></p>
+                        <p class="phone-price-subtitle">$</p>
+                    </div>
+                </div>
+            </div>
+        </template>
+        
+
+        <script src="./index.ts"></script>
+    </body>
+</html>
